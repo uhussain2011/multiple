@@ -17,13 +17,31 @@ Route::get('/', function () {
 });
 */
 
+
+
+Route::get('/project', 'ProjectController@index');
+Route::get('/project/create', 'ProjectController@create');
+Route::POST('/project', 'ProjectController@store');
+Route::get('/project/{id}', 'ProjectController@show');
+Route::get('/project/{id}/edit', 'ProjectController@edit');
+Route::put('/project/{id}', 'ProjectController@update');
+Route::delete('/project/{id}', 'ProjectController@destroy');
+
+
+//Route::resource('/project', 'ProjectController');
+
+
+
+
+
+
 /*Calculator*/
 Route::resource('/', 'HomeController');
 
 
 
 /*Project App*/
-Route::resource('/project', 'ProjectController');
+
 
 
 Route::get('/homes', [

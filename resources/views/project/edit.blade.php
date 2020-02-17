@@ -47,9 +47,12 @@
 <!--<input type="hidden" name="project_id" value="{{$project->id}}"/>
 -->
 <form action="/project/{{$project->id}}" method="POST">
+  
+  @method('PUT')
+  
   @csrf
 
-  @method('PUT')
+
 
 <input type="text" class="form-control" value="{{$project->name}}" name="name" placeholder="name">
 <input type="text" class="form-control" value="{{$project->description}}" name="description" placeholder="description">
