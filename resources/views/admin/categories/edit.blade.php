@@ -18,7 +18,7 @@
 
 
 <div class="panel-heading">
-Create a new category
+Update category: {{ $category->name }}
 </div>
 
 
@@ -26,12 +26,12 @@ Create a new category
 
 <div class="panel-body">
 
-<form action="{{ route('category.store') }}" method="POST">
+<form action="{{ route('category.update', ['id' => $category->id ]) }}" method="POST">
 @csrf
 
 <div class="form-group">
 	<label for="name">Name</label>
-	<input type="text" name="name" class="form-control">
+	<input type="text" name="name" value="{{ $category->name }}" class="form-control">
 </div>
 
 
