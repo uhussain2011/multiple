@@ -18,4 +18,10 @@ class Post extends Model
     {
     	$this->belongsTo('App\Category');
     }
+
+
+
+  
+
+
 }
